@@ -168,6 +168,7 @@ export function injectComponents(recipes = []) {
   return provideRecipesToInjector(recipes, appInjector).get(ContainerFactory);
 }
 
+// 这个是默认导出的 KeplerGL
 const InjectedContainer = appInjector.get(ContainerFactory);
 
 export default InjectedContainer;

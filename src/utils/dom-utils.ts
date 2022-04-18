@@ -228,6 +228,9 @@ export function delay(ms) {
       window.setTimeout(() => {
         resolve(arg);
       }, ms);
+      window.setTimeout(() => {
+        resolve(arg);
+      }, ms);
     });
   };
 }
