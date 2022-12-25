@@ -7,6 +7,7 @@
     "start-local-deck": "webpack-dev-server --mode development --env.es6 --env.deck --progress --hot --open",
     "start-local-deck-src": "webpack-dev-server --mode development --env.es6 --env.deck_src --progress --hot --open",
     "start-local-loaders-src": "webpack-dev-server --mode development --env.es6 --env.loaders_src --progress --hot --open",
+    "start-local-hubble-src": "webpack-dev-server --mode development --env.es6 --env.hubble_src --progress --hot --open",
     "start-local-https": "webpack-dev-server --mode development --https --env.es6 --progress --hot --open"
   },
   "dependencies": {
@@ -14,6 +15,15 @@
     "d3-request": "^1.0.6",
     "dropbox": "^4.0.12",
     "global": "^4.3.0",
+<<<<<<< HEAD
+=======
+    "@kepler.gl/actions": "^3.0.0-alpha.0",
+    "@kepler.gl/components": "^3.0.0-alpha.0",
+    "@kepler.gl/constants": "^3.0.0-alpha.0",
+    "@kepler.gl/processors": "^3.0.0-alpha.0",
+    "@kepler.gl/reducers": "^3.0.0-alpha.0",
+    "@kepler.gl/styles": "^3.0.0-alpha.0",
+>>>>>>> master
     "lodash.debounce": "^4.0.8",
     "lodash.get": "^4.4.2",
     "react": "^16.8.4",
@@ -41,5 +51,10 @@
     "webpack-dev-middleware": "^3.5.1",
     "webpack-dev-server": "^3.1.14",
     "webpack-hot-middleware": "^2.24.3"
+  },
+  "resolutions": {
+    "@luma.gl/webgl": "8.5.16",
+    "@deck.gl/core": "8.8.9",
+    "@deck.gl/extensions": "8.8.9"
   }
 }
