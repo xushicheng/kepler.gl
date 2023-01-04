@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 import React, {Component} from 'react';
-import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
+import AutoSizer from 'react-virtualized-auto-sizer';
 import styled, {ThemeProvider} from 'styled-components';
 import window from 'global/window';
 import {connect} from 'react-redux';
@@ -41,8 +41,9 @@ import {
 } from './actions';
 
 import {loadCloudMap, addDataToMap, addNotification} from '@kepler.gl/actions';
-import {CLOUD_PROVIDERS} from './cloud-providers';
+// import {CLOUD_PROVIDERS} from './cloud-providers';
 
+// 这里是注入自定义的组件
 const KeplerGl = require('@kepler.gl/components').injectComponents([
   replaceLoadDataModal(),
   replaceMapControl(),
@@ -109,17 +110,17 @@ class App extends Component {
     // we ry to fetch along map configurations
     const {params: {id, provider} = {}, location: {query = {}} = {}} = this.props;
 
-    const cloudProvider = CLOUD_PROVIDERS.find(c => c.name === provider);
-    if (cloudProvider) {
-      this.props.dispatch(
-        loadCloudMap({
-          loadParams: query,
-          provider: cloudProvider,
-          onSuccess: onLoadCloudMapSuccess
-        })
-      );
-      return;
-    }
+    // const cloudProvider = CLOUD_PROVIDERS.find(c => c.name === provider);
+    // if (cloudProvider) {
+    //   this.props.dispatch(
+    //     loadCloudMap({
+    //       loadParams: query,
+    //       provider: cloudProvider,
+    //       onSuccess: onLoadCloudMapSuccess
+    //     })
+    //   );
+    //   return;
+    // }
 
     // Load sample using its id
     if (id) {
@@ -398,7 +399,7 @@ class App extends Component {
           </Banner>
           <div
             style={{
-              transition: 'margin 1s, height 1s',
+              transition: 'margin 10s, height 10s',
               position: 'absolute',
               width: '100%',
               height: '100%',
@@ -417,7 +418,7 @@ class App extends Component {
                   getState={keplerGlGetState}
                   width={width}
                   height={height}
-                  cloudProviders={CLOUD_PROVIDERS}
+                  // cloudProviders={CLOUD_PROVIDERS}
                   localeMessages={messages}
                   onExportToCloudSuccess={onExportFileSuccess}
                   onLoadCloudMapSuccess={onLoadCloudMapSuccess}

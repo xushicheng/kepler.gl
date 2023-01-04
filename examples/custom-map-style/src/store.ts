@@ -57,12 +57,7 @@ const mapStyles = {
     ]
   }
 };
-const customizedKeplerGlReducer = keplerGlReducer.initialState({
-  mapStyle: {
-    mapStyles,
-    styleType: 'voyager'
-  }
-});
+const customizedKeplerGlReducer = keplerGlReducer.initialState();
 
 const reducers = combineReducers({
   keplerGl: customizedKeplerGlReducer

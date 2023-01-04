@@ -74,9 +74,9 @@ export {default as SingleColorPalette} from './side-panel/layer-panel/single-col
 export {default as LayerPanelHeaderFactory, DragHandle} from './side-panel/layer-panel/layer-panel-header';
 export {
   default as LayerConfiguratorFactory,
-  LayerColorRangeSelector, 
-  getLayerConfiguratorProps, 
-  getVisConfiguratorProps, 
+  LayerColorRangeSelector,
+  getLayerConfiguratorProps,
+  getVisConfiguratorProps,
   ArcLayerColorSelector,
   LayerColorSelector
 } from './side-panel/layer-panel/layer-configurator';

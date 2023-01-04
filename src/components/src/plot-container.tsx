@@ -235,6 +235,7 @@ export default function PlotContainerFactory(
           ))}
         </MapsLayout>
       );
+
       return (
         <StyledPlotContainer className="export-map-instance">
           <StyledMapContainer ref={this.plottingAreaRef} width={size.width} height={size.height}>

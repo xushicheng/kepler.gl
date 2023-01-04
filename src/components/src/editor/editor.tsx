@@ -20,18 +20,13 @@
 
 import React, {Component, CSSProperties, KeyboardEvent} from 'react';
 import styled from 'styled-components';
-import window from 'global/window';
+// import window from 'global/window';
 import classnames from 'classnames';
 import get from 'lodash.get';
 import {createSelector} from 'reselect';
 
 import FeatureActionPanelFactory, {FeatureActionPanelProps} from './feature-action-panel';
-import {
-  EDITOR_AVAILABLE_LAYERS,
-  FILTER_TYPES,
-  EDITOR_MODES,
-  KeyEvent
-} from '@kepler.gl/constants';
+import {EDITOR_AVAILABLE_LAYERS, FILTER_TYPES, EDITOR_MODES, KeyEvent} from '@kepler.gl/constants';
 import {Layer, EditorLayerUtils} from '@kepler.gl/layers';
 import {Filter, FeatureSelectionContext} from '@kepler.gl/types';
 import {Feature} from '@nebula.gl/edit-modes';
@@ -49,7 +44,7 @@ interface EditorProps {
   filters: Filter[];
   layers: Layer[];
   datasets: Datasets;
-  editor: {selectedFeature: Feature; mode: string, selectionContext?: FeatureSelectionContext};
+  editor: {selectedFeature: Feature; mode: string; selectionContext?: FeatureSelectionContext};
   layersToRender: Record<string, Layer>;
   index: number;
   className: string;

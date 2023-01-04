@@ -24,8 +24,8 @@
     "isolatedModules": true,
     "baseUrl": "./src", //TODO change once all dependencies are isolated
     "paths": {
-      "*": ["*"] //TODO change once all dependencies are isolated
+      "*": [ "*" ] //TODO change once all dependencies are isolated
     }
   },
-  "include": ["src"]
+  "include": [ "src" ]
 }

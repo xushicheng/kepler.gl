@@ -50,6 +50,10 @@ const CONFIG = {
         loader: 'babel-loader',
         include: [join(__dirname, 'src')],
         exclude: [/node_modules/]
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        loader: 'ts-loader'
       }
     ]
   },

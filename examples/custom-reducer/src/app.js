@@ -20,7 +20,7 @@
 
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
+import AutoSizer from 'react-virtualized-auto-sizer';
 import KeplerGl from '@kepler.gl/components';
 import {createAction} from 'redux-actions';
 

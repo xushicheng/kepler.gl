@@ -24,10 +24,10 @@
     "isolatedModules": true,
     "baseUrl": "./src",
     "paths": {
-      "*": ["*"]
+      "*": [ "*" ]
     }
   },
-  "include": ["src"],
+  "include": [ "src" ],
   "exclude": [
     "src/deckgl-layers",
     "src/layers",

@@ -36,7 +36,7 @@ const App = () => (
     <AutoSizer>
       {({height, width}) => (
         <KeplerGl
-          mapboxApiAccessToken=""
+          mapboxApiAccessToken="pk.eyJ1IjoiaGFucWl1IiwiYSI6ImNrZ2pjdmNsZTBveXkycW8zYjA4N3U0Ym8ifQ.SjP7d69NztifBh1z23BesQ"
           id="map"
           width={width}
           height={height}

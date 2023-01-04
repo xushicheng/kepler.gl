@@ -18,7 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-const console = require('global/console');
+const console = require('global');
 
 const Colors = {
   Reset: '\x1b[0m',
@@ -46,7 +46,7 @@ const Colors = {
   BgMagenta: '\x1b[45m',
   BgCyan: '\x1b[46m',
   BgWhite: '\x1b[47m'
-}
+};
 
 function log(color) {
   return function logWithColor(msg) {
@@ -59,5 +59,5 @@ module.exports = {
   logOk: log(Colors.FgCyan),
   logError: log(Colors.FgRed),
   logProgress: log(Colors.FgBlue),
-  logStep: log(Colors.FgMagenta),
-}
+  logStep: log(Colors.FgMagenta)
+};

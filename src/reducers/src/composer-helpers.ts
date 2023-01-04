@@ -18,58 +18,67 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Console from 'global/console';
+import Console from "global";
 
-const identity = state => state;
+const identity = (state) => state;
 
 /** Returns a function that logs a value with a given message */
 export function log(text: string): (value: any) => void {
-  return value => Console.log(text, value);
+	return (value) => Console.log(text, value);
 }
 /** Wraps a value in an object and stores it the `payload` field */
 export function payload_<P>(payload: P) {
-  return {payload};
+	return { payload };
 }
 /** Wraps a value in an object and stores it the `payload` field */
 export function apply_<State, P>(
-  updater: (state: State, nextPayload: P) => State,
-  payload: P
+	updater: (state: State, nextPayload: P) => State,
+	payload: P,
 ): (state: State) => State {
-  return state => updater(state, payload);
+	return (state) => updater(state, payload);
 }
 
 export function with_<State>(
-  fn: (state: State) => (nextState: State) => State
+	fn: (state: State) => (nextState: State) => State,
 ): (state: State) => State {
-  return state => fn(state)(state);
+	return (state) => fn(state)(state);
 }
 
-export function if_<State>(pred: boolean, fn: (state: State) => State): (state: State) => State {
-  return pred ? fn : identity;
+export function if_<State>(
+	pred: boolean,
+	fn: (state: State) => State,
+): (state: State) => State {
+	return pred ? fn : identity;
 }
 
-export function compose_<State>(fns: Array<(s: State) => State>): (s: State) => State {
-  return state => fns.reduce((state2, fn) => fn(state2), state);
+export function compose_<State>(
+	fns: Array<(s: State) => State>,
+): (s: State) => State {
+	return (state) => fns.reduce((state2, fn) => fn(state2), state);
 }
 /** Returns a reducer function that merges props with state */
 export function merge_<Props>(obj: Props): <State>(state: State) => State {
-  return state => ({...state, ...obj});
+	return (state) => ({ ...state, ...obj });
 }
 
 export function pick_<Prop extends string>(
-  prop: Prop
-): <Value>(fn: (p: Value) => Value) => <State extends Record<Prop, Value>>(state: State) => State {
-  return fn => state => ({...state, [prop]: fn(state[prop])});
+	prop: Prop,
+): <Value>(
+	fn: (p: Value) => Value,
+) => <State extends Record<Prop, Value>>(state: State) => State {
+	return (fn) => (state) => ({ ...state, [prop]: fn(state[prop]) });
 }
 
-export function swap_<X extends {id: string}>(item: X): (arr: X[]) => X[] {
-  return arr => arr.map(a => (a.id === item.id ? item : a));
+export function swap_<X extends { id: string }>(item: X): (arr: X[]) => X[] {
+	return (arr) => arr.map((a) => (a.id === item.id ? item : a));
 }
 
-export function findById<X extends {id: string}>(id: string): (arr: X[]) => X | undefined {
-  return arr => arr.find(a => a.id === id);
+export function findById<X extends { id: string }>(
+	id: string,
+): (arr: X[]) => X | undefined {
+	return (arr) => arr.find((a) => a.id === id);
 }
 
 export function map_<X>(fn: (state: X) => X): (arr: X[]) => X[] {
-  return arr => arr.map(e => fn(e));
+	return (arr) => arr.map((e) => fn(e));
 }
