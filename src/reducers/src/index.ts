@@ -35,10 +35,15 @@ export {
 } from './core';
 
 // Each individual reducer
+// 地图 80% 的交互写在 vis 里
 export {default as visStateReducer} from './vis-state';
+// 对底图的设置及操作
 export {default as mapStateReducer} from './map-state';
+// 对所有面板的交互
 export {default as uiStateReducer} from './ui-state';
+// 对底图样式的操作
 export {default as mapStyleReducer} from './map-style';
+// 加载云服务/导出服务等等
 export {default as providerReducer} from './provider-state';
 
 // reducer updaters

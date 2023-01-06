@@ -19,12 +19,12 @@
 // THE SOFTWARE.
 
 // DROPBOX
-import {Dropbox} from 'dropbox';
-import window from 'global/window';
 import Console from 'global/console';
 import DropboxIcon from './dropbox-icon';
 import {MAP_URI} from '../../constants/default-settings';
 import {Provider} from '@kepler.gl/cloud-providers';
+import pkg from 'dropbox';
+const {Dropbox} = pkg;
 
 const NAME = 'dropbox';
 const DISPLAY_NAME = 'Dropbox';

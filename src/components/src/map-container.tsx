@@ -774,7 +774,7 @@ export default function MapContainerFactory(
             onToggleEditorVisibility={visStateActions.toggleEditorVisibility}
             mapHeight={mapState.height}
           />
-          {/* 
+          {/*
           // @ts-ignore */}
           <MapComponent
             key="bottom"
@@ -789,7 +789,7 @@ export default function MapContainerFactory(
           </MapComponent>
           {mapStyle.topMapStyle || hasGeocoderLayer ? (
             <div style={MAP_STYLE.top}>
-              {/* 
+              {/*
               // @ts-ignore */}
               <MapComponent
                 key="top"

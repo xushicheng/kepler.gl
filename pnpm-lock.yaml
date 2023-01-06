@@ -246,6 +246,7 @@ importers:
       '@kepler.gl/constants': workspace:*
       '@kepler.gl/processors': workspace:*
       '@kepler.gl/reducers': workspace:*
+      '@kepler.gl/schemas': 'workspace: *'
       '@kepler.gl/styles': workspace:*
       '@kepler.gl/utils': workspace:*
       '@vitejs/plugin-react': ^3.0.0
@@ -276,6 +277,7 @@ importers:
       '@kepler.gl/constants': link:../../src/constants
       '@kepler.gl/processors': link:../../src/processors
       '@kepler.gl/reducers': link:../../src/reducers
+      '@kepler.gl/schemas': link:../../src/schemas
       '@kepler.gl/styles': link:../../src/styles
       '@kepler.gl/utils': link:../../src/utils
       d3-request: 1.0.6

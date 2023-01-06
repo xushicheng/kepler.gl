@@ -14,4 +14,5 @@ packages:
   - "./src/actions"
   - "./src/reducers"
   - "./src/components"
+  - "./examples/demo-app"
   - "./examples/custom-map-style"

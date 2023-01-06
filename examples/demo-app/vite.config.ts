@@ -6,7 +6,10 @@ import path from "path";
 
 export default defineConfig({
   clearScreen: false,
-  plugins: [react(), reactVirtualized()]
+  plugins: [react(), reactVirtualized()],
+  define: {
+    'process.env': {}
+  }
 });
 
 const WRONG_CODE = `import { bpfrpt_proptype_WindowScroller } from "../WindowScroller.js";`;

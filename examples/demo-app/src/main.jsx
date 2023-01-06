@@ -42,4 +42,4 @@ const Root = () => (
   </Provider>
 );
 
-render(<Root />, document.body.appendChild(document.createElement('div')));
+render(<Root />, document.getElementById('root').appendChild(document.createElement('div')));

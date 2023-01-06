@@ -7,6 +7,7 @@
     "@kepler.gl/constants": "workspace:*",
     "@kepler.gl/processors": "workspace:*",
     "@kepler.gl/reducers": "workspace:*",
+    "@kepler.gl/schemas": "workspace: *",
     "@kepler.gl/styles": "workspace:*",
     "@kepler.gl/utils": "workspace:*",
     "d3-request": "^1.0.6",
